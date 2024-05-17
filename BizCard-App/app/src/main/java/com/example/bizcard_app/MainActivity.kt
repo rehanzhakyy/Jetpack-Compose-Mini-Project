@@ -1,6 +1,7 @@
 package com.example.bizcard_app
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -19,6 +20,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CardElevation
@@ -80,6 +82,14 @@ fun CreateBizCard() {
                 CreateImageProfile()
                 Divider()
                 CreateInfo()
+                Button(
+                    onClick = {
+                        Log.d("Clicked", "CreateBizCard: Button Clicked")
+                    }
+                ) {
+                    Text("Portfolio",
+                    style = MaterialTheme.typography.bodyMedium)
+                }
             }
 
         }
