@@ -79,9 +79,25 @@ fun CreateBizCard() {
             ) {
                 CreateImageProfile()
                 Divider()
+                CreateInfo()
             }
 
         }
+    }
+}
+
+@Composable
+private fun CreateInfo() {
+    Column(modifier = Modifier.padding(5.dp)) {
+        Text(
+            text = "Raihan Zhaky", style = MaterialTheme.typography.headlineMedium,
+            color = MaterialTheme.colorScheme.primary
+        )
+        Text(text = "Mobile Application Mentor", modifier = Modifier.padding(3.dp))
+        Text(
+            text = "@rehanzhakyy", modifier = Modifier.padding(3.dp),
+            style = MaterialTheme.typography.bodyMedium
+        )
     }
 }
 
