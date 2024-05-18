@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -20,6 +21,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.RoundRect
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
@@ -49,7 +51,6 @@ fun MyApp(content: @Composable () -> Unit) {
 }
 
 @Composable
-@Preview
 fun TopHeader(totalPerPerson: Double = 0.0) {
     Surface(
         modifier = Modifier
@@ -77,12 +78,20 @@ fun TopHeader(totalPerPerson: Double = 0.0) {
 }
 
 
-//@Preview(showBackground = true)
-//@Composable
-//fun GreetingPreview() {
-//    JetTipAppTheme {
-//        MyApp {
-//            Text(text = "Hello world")
-//        }
-//    }
-//}
+@Preview(showBackground = true)
+@Composable
+fun MainContent() {
+    Surface(
+        modifier = Modifier
+            .padding(2.dp)
+            .fillMaxWidth(),
+        shape = RoundedCornerShape(corner = CornerSize(8.dp)),
+        border = BorderStroke(width = 1.dp, color = Color.LightGray)
+    ) {
+        Column() {
+
+        }
+    }
+}
+
+
