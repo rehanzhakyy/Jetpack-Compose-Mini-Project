@@ -86,7 +86,7 @@ fun MainContent() {
             .padding(2.dp)
             .fillMaxWidth(),
         shape = RoundedCornerShape(corner = CornerSize(8.dp)),
-        border = BorderStroke(width = 1.dp, color = Color.LightGray)
+        border = BorderStroke(width = 1.dp, color = Color.White)
     ) {
         Column() {
 
